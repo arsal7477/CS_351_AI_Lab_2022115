@@ -88,8 +88,9 @@ def guessgame1():
             print("Invalid feedback. Please enter one of 'c', 'h', or 'l'.")
         
 guessgame1()
-  </code>
-<p>In this code, if the correct number was 10, the AI would have started guessing from 1 and sequentially increased the guesses by 1 each time. It would have needed 10 attempts to correctly guess the number 10.</p></code>
+</code>
+<p>In this code, if the correct number was 10, the AI would have started guessing from 1 and sequentially increased each guess by 1. It would have needed 10 attempts to correctly guess the number 10. This code uses a queue-based logic where all the numbers in the range are initially placed inside the queue, and each number is popped from the top of the queue for guessing.</p>
+
 </pre>
 
 <!-- Code Block 3 -->
@@ -124,6 +125,7 @@ def guessgame2():
 guessgame2()
 
 </code>
+<p>In this code, if the correct number was 10, the AI would have started guessing from 100 and sequentially decreased the guesses by 1 each time. It would have needed 90 attempts to correctly guess the number 10. This code uses stack logic, where numbers are pushed onto the stack in descending order and then popped from the top of the stack for guessing. Because a stack follows LIFO (Last In, First Out) order, the AI would first guess the highest number and work its way down to the correct number.</p>
 </pre>
 
 <!-- Code Block 3 -->
@@ -179,4 +181,5 @@ def guessgame3():
 
 guessgame3()
 </code>
+<p>Adaptive Search: This approach produces results similar to a binary search, but instead of simply halving the search range each time, it adjusts its guesses based on previous guesses and feedback. The algorithm uses the information from earlier guesses to adaptively adjust its future guesses, making it more flexible and potentially faster in converging to the correct number.</p>
 </pre>
