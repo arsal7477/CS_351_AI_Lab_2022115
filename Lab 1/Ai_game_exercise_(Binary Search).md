@@ -8,7 +8,7 @@
   <h2>Lab Exercise</h2>
   <p><strong>Arsalan Khan</strong><br>2022115<br>Cyber Security</p>
   <br>
-  <h3>Submitted to: Sir Usama Janjua</h3>
+  <h3>Submitted to: Sir Usama Arshad</h3>
   <p>Date: September 9, 2024</p>
 </div>
 
