@@ -85,54 +85,51 @@ def guessgame1():
             print("too low")
         
         else:
-            print("Invalid feedback. Please enter one of 'c', 'h', or 'l'.")
+            print("invalid feedback please enter one of 'c', 'h', or 'l'")
         
 guessgame1()
 </code>
-<p>In this code, if the correct number was 10, the AI would have started guessing from 1 and sequentially increased each guess by 1. It would have needed 10 attempts to correctly guess the number 10. This code uses a queue-based logic where all the numbers in the range are initially placed inside the queue, and each number is popped from the top of the queue for guessing.</p>
-
 </pre>
+<p>In this code, if the correct number was 10, the AI would have started guessing from 1 and sequentially increased each guess by 1. It would have needed 10 attempts to correctly guess the number 10. This code uses a queue-based logic where all the numbers in the range are initially placed inside the queue, and each number is popped from the top of the queue for guessing.</p>
 
 <!-- Code Block 3 -->
 <h4>Below is the Python code for the AI guessing game using Depth First Search Algorithm:</h4>
 <pre>
 <code>
 def guessgame2():
-    print("wellcome to ai guess game,guess a number from 1 t0 100")
-    low =1 
+    print("wellcome to ai guess game, guess a number from 1 to 100")
+    low = 1 
     high = 100
     attempts = 0
     
-    stack = list(range(low,high+1))
+    stack = list(range(low, high + 1))
     
     while stack:
         guess = stack.pop()
-        attempts +=1
+        attempts += 1
         print(f"ai guess is {guess}")
-        feedback = input("select one of the following c,h,l").lower()
+        feedback = input("select one of the following c,h,l: ").lower()
         
-        if feedback =='c':
+        if feedback == 'c':
             print(f"ai guessed correctly in {attempts} attempts")
             return
-        elif feedback =='h':
+        elif feedback == 'h':
             print("too high")
         elif feedback == 'l':
-            print("too low...")
+            print("too low")
         
         else:
-            print("invalid choice,,,")
-
+            print("invalid choice")
+        
 guessgame2()
-
 </code>
-<p>In this code, if the correct number was 10, the AI would have started guessing from 100 and sequentially decreased the guesses by 1 each time. It would have needed 90 attempts to correctly guess the number 10. This code uses stack logic, where numbers are pushed onto the stack in descending order and then popped from the top of the stack for guessing. Because a stack follows LIFO (Last In, First Out) order, the AI would first guess the highest number and work its way down to the correct number.</p>
 </pre>
+<p>In this code, if the correct number was 10, the AI would have started guessing from 100 and sequentially decreased the guesses by 1 each time. It would have needed 90 attempts to correctly guess the number 10. This code uses stack logic, where numbers are pushed onto the stack in descending order and then popped from the top of the stack for guessing. Because a stack follows LIFO (Last In, First Out) order, the AI would first guess the highest number and work its way down to the correct number.</p>
 
-<!-- Code Block 3 -->
+<!-- Code Block 4 -->
 <h5>Below is the Python code for the AI guessing game using Adaptive Search Algorithm:</h5>
 <pre>
 <code>
-
 def guessgame3():
     print("welcome to the guess game using adaptive search")
     
@@ -181,6 +178,5 @@ def guessgame3():
 
 guessgame3()
 </code>
-<p>Adaptive Search: This approach produces results similar to a binary search, but instead of simply halving the search range each time, it adjusts its guesses based on previous guesses and feedback. The algorithm uses the information from earlier guesses to adaptively adjust its future guesses, making it more flexible and potentially faster in converging to the correct number.
-The correct number that I had chosen was 10. It took 4 attempts for the AI to guess it correctly.</p>
 </pre>
+<p>Adaptive Search: This approach produces results similar to a binary search, but instead of simply halving the search range each time, it adjusts its guesses based on previous guesses and feedback. The algorithm uses the information from earlier guesses to adaptively adjust its future guesses, making it more flexible and potentially faster in converging to the correct number. The correct number that I had chosen was 10. It took 4 attempts for the AI to guess it correctly.</p>
