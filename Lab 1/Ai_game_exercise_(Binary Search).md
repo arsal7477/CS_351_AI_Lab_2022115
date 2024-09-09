@@ -88,7 +88,7 @@ def guessgame1():
             print("Invalid feedback. Please enter one of 'c', 'h', or 'l'.")
         
 guessgame1()
-</code>
+<p>In this code, if the correct number was 10, the AI would have started guessing from 1 and sequentially increased the guesses by 1 each time. It would have needed 10 attempts to correctly guess the number 10.</p></code>
 </pre>
 
 <!-- Code Block 3 -->
