@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Guessing Game</title>
-    <!-- Prism.js CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.min.css" rel="stylesheet">
+    <style>
+        /* Basic styling for code blocks */
+        pre {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            overflow: auto;
+        }
+
+        code {
+            font-family: monospace;
+            font-size: 1em;
+        }
+
+        h3, h4 {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <!-- Centered content -->
@@ -28,7 +45,7 @@
     <!-- Code Block 1 -->
     <h3>Below is the Python code for the AI guessing game using Binary Search Algorithm:</h3>
 
-    <pre><code class="language-python">
+    <pre><code>
 def guessgame():
     print("welcome guess a number from 1 to 100")
     low = 1
@@ -65,7 +82,7 @@ guessgame()
     <!-- Code Block 2 -->
     <h3>Below is the Python code for the AI guessing game using Breadth First Search Algorithm:</h3>
 
-    <pre><code class="language-python">
+    <pre><code>
 def guessgame1():
     print("wellcome to ai guess game(BFS)")
     low = 1
@@ -100,7 +117,7 @@ guessgame1()
 
     <!-- Code Block 3 -->
     <h4>Below is the Python code for the AI guessing game using Depth First Search Algorithm:</h4>
-    <pre><code class="language-python">
+    <pre><code>
 def guessgame2():
     print("wellcome to ai guess game, guess a number from 1 to 100")
     low = 1 
@@ -132,7 +149,7 @@ guessgame2()
 
     <!-- Code Block 4 -->
     <h3>Below is the Python code for the AI guessing game using Adaptive Search Algorithm:</h3>
-    <pre><code class="language-python">
+    <pre><code>
 def guessgame3():
     print("welcome to the guess game using adaptive search")
     
@@ -182,8 +199,5 @@ def guessgame3():
 guessgame3()
     </code></pre>
     <p>Adaptive Search: This approach produces results similar to a binary search, but instead of simply halving the search range each time, it adjusts its guesses based on previous guesses and feedback. The algorithm uses the information from earlier guesses to adaptively adjust its future guesses, making it more flexible and potentially faster in converging to the correct number. The correct number that I had chosen was 10. It took 4 attempts for the AI to guess it correctly.</p>
-
-    <!-- Prism.js JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
 </body>
 </html>
