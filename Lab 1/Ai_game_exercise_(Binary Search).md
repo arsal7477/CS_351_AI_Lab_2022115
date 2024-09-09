@@ -44,3 +44,37 @@ def guessgame():
     print("something's wrong")
     
 guessgame()
+
+<!--  code -->
+Below is the Python code for the AI guessing game using Breadth First Search Algorithm:
+
+def guessgame1():
+    print("wellcome to ai guess game(BFS)")
+    low =1
+    high =100
+    
+    queue = list(range(low,high+1)) #high+1 incledes 100
+    attempts=0
+    
+    while queue:
+        
+        guess = queue.pop(0)
+        attempts +=1
+        
+        print(f"ai guess is {guess}")
+        
+        feedback = input("enter 1 of the folowing c,h,l: ").lower()
+        
+        if feedback == 'c':
+            print(f"ai guessed correctly in {attempts} attempts")
+            return
+        
+        elif feedback == 'h':
+            print("too high...")
+        elif feedback == 'l':
+            print("too low")
+        
+        else:
+            print("Invalid feedback. Please enter one of 'c', 'h', or 'l'.")
+        
+guessgame1()        
