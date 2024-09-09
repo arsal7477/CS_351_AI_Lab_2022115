@@ -125,7 +125,7 @@ guessgame2()
 </pre>
 
 <!-- Code Block 3 -->
-<h5>Below is the Python code for the AI guessing game using Depth First Search Algorithm:</h5>
+<h5>Below is the Python code for the AI guessing game using Adaptive Search Algorithm:</h5>
 <pre>
 <code>
 
