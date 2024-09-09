@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Guessing Game</title>
-    <!-- Prism.js CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.min.css" rel="stylesheet">
+    <style>
+        pre {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            overflow: auto;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            font-size: 14px;
+        }
+        code {
+            color: #d63384; /* Pink for keywords */
+        }
+        .variable {
+            color: #0056b3; /* Blue for variables */
+        }
+        .comment {
+            color: #6c757d; /* Gray for comments */
+            font-style: italic;
+        }
+        .string {
+            color: #28a745; /* Green for strings */
+        }
+    </style>
 </head>
 <body>
     <!-- Centered content -->
@@ -28,35 +50,36 @@
     <!-- Code Block 1 -->
     <h3>Below is the Python code for the AI guessing game using Binary Search Algorithm:</h3>
 
-    <pre><code class="language-python">
-def guessgame():
-    print("welcome guess a number from 1 to 100")
-    low = 1
-    high = 100
-    attempts = 0
+    <pre><code>
+<span class="comment"># Binary Search Algorithm</span>
+<span class="variable">def</span> <span class="variable">guessgame</span>():
+    <span class="variable">print</span>(<span class="string">"welcome guess a number from 1 to 100"</span>)
+    <span class="variable">low</span> = <span class="number">1</span>
+    <span class="variable">high</span> = <span class="number">100</span>
+    <span class="variable">attempts</span> = <span class="number">0</span>
     
-    while (low <= high):
-        guess = (low + high) // 2
-        attempts += 1
+    <span class="variable">while</span> (<span class="variable">low</span> <= <span class="variable">high</span>):
+        <span class="variable">guess</span> = (<span class="variable">low</span> + <span class="variable">high</span>) // <span class="number">2</span>
+        <span class="variable">attempts</span> += <span class="number">1</span>
         
-        print(f"ai guess: {guess}")
-        feedback = input("enter feedback c,l,h::").lower()
+        <span class="variable">print</span>(f<span class="string">"ai guess: {guess}"</span>)
+        <span class="variable">feedback</span> = <span class="variable">input</span>(<span class="string">"enter feedback c,l,h::"</span>).<span class="variable">lower</span>()
         
-        if feedback == 'c':
-            print(f"ai guessed correctly in {attempts} attempt(s)")
-            return
+        <span class="variable">if</span> <span class="variable">feedback</span> == <span class="string"> 'c'</span>:
+            <span class="variable">print</span>(f<span class="string">"ai guessed correctly in {attempts} attempt(s)"</span>)
+            <span class="variable">return</span>
     
-        elif feedback == 'h':
-            high = guess - 1
-            print("too high")
+        <span class="variable">elif</span> <span class="variable">feedback</span> == <span class="string"> 'h'</span>:
+            <span class="variable">high</span> = <span class="variable">guess</span> - <span class="number">1</span>
+            <span class="variable">print</span>(<span class="string">"too high"</span>)
         
-        elif feedback == 'l':
-            low = guess + 1
-            print("too low")
+        <span class="variable">elif</span> <span class="variable">feedback</span> == <span class="string"> 'l'</span>:
+            <span class="variable">low</span> = <span class="variable">guess</span> + <span class="number">1</span>
+            <span class="variable">print</span>(<span class="string">"too low"</span>)
         
-    print("something's wrong")
+    <span class="variable">print</span>(<span class="string">"something's wrong"</span>)
     
-guessgame()
+<span class="variable">guessgame</span>()
     </code></pre>
 
     <!-- Separator -->
@@ -65,125 +88,125 @@ guessgame()
     <!-- Code Block 2 -->
     <h3>Below is the Python code for the AI guessing game using Breadth First Search Algorithm:</h3>
 
-    <pre><code class="language-python">
-def guessgame1():
-    print("wellcome to ai guess game(BFS)")
-    low = 1
-    high = 100
+    <pre><code>
+<span class="comment"># Breadth First Search Algorithm</span>
+<span class="variable">def</span> <span class="variable">guessgame1</span>():
+    <span class="variable">print</span>(<span class="string">"wellcome to ai guess game(BFS)"</span>)
+    <span class="variable">low</span> = <span class="number">1</span>
+    <span class="variable">high</span> = <span class="number">100</span>
     
-    queue = list(range(low, high + 1))  # high + 1 includes 100
-    attempts = 0
+    <span class="variable">queue</span> = <span class="variable">list</span>(<span class="variable">range</span>(<span class="variable">low</span>, <span class="variable">high</span> + <span class="number">1</span>))  <span class="comment"># high + 1 includes 100</span>
+    <span class="variable">attempts</span> = <span class="number">0</span>
     
-    while queue:
-        guess = queue.pop(0)
-        attempts += 1
+    <span class="variable">while</span> <span class="variable">queue</span>:
+        <span class="variable">guess</span> = <span class="variable">queue</span>.<span class="variable">pop</span>(<span class="number">0</span>)
+        <span class="variable">attempts</span> += <span class="number">1</span>
         
-        print(f"ai guess is {guess}")
+        <span class="variable">print</span>(f<span class="string">"ai guess is {guess}"</span>)
         
-        feedback = input("enter 1 of the following c,h,l: ").lower()
+        <span class="variable">feedback</span> = <span class="variable">input</span>(<span class="string">"enter 1 of the following c,h,l: "</span>).<span class="variable">lower</span>()
         
-        if feedback == 'c':
-            print(f"ai guessed correctly in {attempts} attempts")
-            return
+        <span class="variable">if</span> <span class="variable">feedback</span> == <span class="string"> 'c'</span>:
+            <span class="variable">print</span>(f<span class="string">"ai guessed correctly in {attempts} attempts"</span>)
+            <span class="variable">return</span>
         
-        elif feedback == 'h':
-            print("too high...")
-        elif feedback == 'l':
-            print("too low")
+        <span class="variable">elif</span> <span class="variable">feedback</span> == <span class="string"> 'h'</span>:
+            <span class="variable">print</span>(<span class="string">"too high..."</span>)
+        <span class="variable">elif</span> <span class="variable">feedback</span> == <span class="string"> 'l'</span>:
+            <span class="variable">print</span>(<span class="string">"too low"</span>)
         
-        else:
-            print("invalid feedback please enter one of 'c', 'h', or 'l'")
+        <span class="variable">else</span>:
+            <span class="variable">print</span>(<span class="string">"Invalid feedback please enter one of 'c', 'h', or 'l'"</span>)
         
-guessgame1()
+<span class="variable">guessgame1</span>()
     </code></pre>
     <p>In this code, if the correct number was 10, the AI would have started guessing from 1 and sequentially increased each guess by 1. It would have needed 10 attempts to correctly guess the number 10. This code uses a queue-based logic where all the numbers in the range are initially placed inside the queue, and each number is popped from the top of the queue for guessing.</p>
 
     <!-- Code Block 3 -->
     <h4>Below is the Python code for the AI guessing game using Depth First Search Algorithm:</h4>
-    <pre><code class="language-python">
-def guessgame2():
-    print("wellcome to ai guess game, guess a number from 1 to 100")
-    low = 1 
-    high = 100
-    attempts = 0
+    <pre><code>
+<span class="comment"># Depth First Search Algorithm</span>
+<span class="variable">def</span> <span class="variable">guessgame2</span>():
+    <span class="variable">print</span>(<span class="string">"wellcome to ai guess game, guess a number from 1 to 100"</span>)
+    <span class="variable">low</span> = <span class="number">1</span>
+    <span class="variable">high</span> = <span class="number">100</span>
+    <span class="variable">attempts</span> = <span class="number">0</span>
     
-    stack = list(range(low, high + 1))
+    <span class="variable">stack</span> = <span class="variable">list</span>(<span class="variable">range</span>(<span class="variable">low</span>, <span class="variable">high</span> + <span class="number">1</span>))
     
-    while stack:
-        guess = stack.pop()
-        attempts += 1
-        print(f"ai guess is {guess}")
-        feedback = input("select one of the following c,h,l: ").lower()
+    <span class="variable">while</span> <span class="variable">stack</span>:
+        <span class="variable">guess</span> = <span class="variable">stack</span>.<span class="variable">pop</span>()
+        <span class="variable">attempts</span> += <span class="number">1</span>
+        <span class="variable">print</span>(f<span class="string">"ai guess is {guess}"</span>)
+        <span class="variable">feedback</span> = <span class="variable">input</span>(<span class="string">"select one of the following c,h,l: "</span>).<span class="variable">lower</span>()
         
-        if feedback == 'c':
-            print(f"ai guessed correctly in {attempts} attempts")
-            return
-        elif feedback == 'h':
-            print("too high")
-        elif feedback == 'l':
-            print("too low")
+        <span class="variable">if</span> <span class="variable">feedback</span> == <span class="string"> 'c'</span>:
+            <span class="variable">print</span>(f<span class="string">"ai guessed correctly in {attempts} attempts"</span>)
+            <span class="variable">return</span>
+        <span class="variable">elif</span> <span class="variable">feedback</span> == <span class="string"> 'h'</span>:
+            <span class="variable">print</span>(<span class="string">"too high"</span>)
+        <span class="variable">elif</span> <span class="variable">feedback</span> == <span class="string"> 'l'</span>:
+            <span class="variable">print</span>(<span class="string">"too low"</span>)
         
-        else:
-            print("invalid choice")
+        <span class="variable">else</span>:
+            <span class="variable">print</span>(<span class="string">"invalid choice"</span>)
         
-guessgame2()
+<span class="variable">guessgame2</span>()
     </code></pre>
     <p>In this code, if the correct number was 10, the AI would have started guessing from 100 and sequentially decreased the guesses by 1 each time. It would have needed 90 attempts to correctly guess the number 10. This code uses stack logic, where numbers are pushed onto the stack in descending order and then popped from the top of the stack for guessing. Because a stack follows LIFO (Last In, First Out) order, the AI would first guess the highest number and work its way down to the correct number.</p>
 
     <!-- Code Block 4 -->
     <h3>Below is the Python code for the AI guessing game using Adaptive Search Algorithm:</h3>
-    <pre><code class="language-python">
-def guessgame3():
-    print("welcome to the guess game using adaptive search")
+    <pre><code>
+<span class="comment"># Adaptive Search Algorithm</span>
+<span class="variable">def</span> <span class="variable">guessgame3</span>():
+    <span class="variable">print</span>(<span class="string">"welcome to the guess game using adaptive search"</span>)
     
-    low = 1
-    high = 100
-    attempts = 0
+    <span class="variable">low</span> = <span class="number">1</span>
+    <span class="variable">high</span> = <span class="number">100</span>
+    <span class="variable">attempts</span> = <span class="number">0</span>
     
-    prev_guess = None
-    prev_feedback = None
+    <span class="variable">prev_guess</span> = <span class="keyword">None</span>
+    <span class="variable">prev_feedback</span> = <span class="keyword">None</span>
     
-    while low <= high:
+    <span class="variable">while</span> <span class="variable">low</span> <= <span class="variable">high</span>:
         
-        if prev_guess is None:
-            guess = (low + high) // 2
-        elif prev_feedback == 'h':
-            guess = prev_guess - (prev_guess - low) // 2
-        elif prev_feedback == 'l':
-            guess = prev_guess + (high - prev_guess) // 2
-        else:
-            guess = (low + high) // 2
+        <span class="variable">if</span> <span class="variable">prev_guess</span> <span class="variable">is</span> <span class="keyword">None</span>:
+            <span class="variable">guess</span> = (<span class="variable">low</span> + <span class="variable">high</span>) // <span class="number">2</span>
+        <span class="variable">elif</span> <span class="variable">prev_feedback</span> == <span class="string"> 'h'</span>:
+            <span class="variable">guess</span> = <span class="variable">prev_guess</span> - (<span class="variable">prev_guess</span> - <span class="variable">low</span>) // <span class="number">2</span>
+        <span class="variable">elif</span> <span class="variable">prev_feedback</span> == <span class="string"> 'l'</span>:
+            <span class="variable">guess</span> = <span class="variable">prev_guess</span> + (<span class="variable">high</span> - <span class="variable">prev_guess</span>) // <span class="number">2</span>
+        <span class="variable">else</span>:
+            <span class="variable">guess</span> = (<span class="variable">low</span> + <span class="variable">high</span>) // <span class="number">2</span>
         
-        print(f"ai guess: {guess}")
-        feedback = input("enter feedback c,h,l: ").lower()
+        <span class="variable">print</span>(f<span class="string">"ai guess: {guess}"</span>)
+        <span class="variable">feedback</span> = <span class="variable">input</span>(<span class="string">"enter feedback c,h,l: "</span>).<span class="variable">lower</span>()
         
-        if feedback == 'c':
-            print(f"ai guessed correctly in {attempts} attempt(s)")
-            return
+        <span class="variable">if</span> <span class="variable">feedback</span> == <span class="string"> 'c'</span>:
+            <span class="variable">print</span>(f<span class="string">"ai guessed correctly in {attempts} attempt(s)"</span>)
+            <span class="variable">return</span>
         
-        elif feedback == 'h':
-            print("too high")
-            high = guess - 1
+        <span class="variable">elif</span> <span class="variable">feedback</span> == <span class="string"> 'h'</span>:
+            <span class="variable">print</span>(<span class="string">"too high"</span>)
+            <span class="variable">high</span> = <span class="variable">guess</span> - <span class="number">1</span>
             
-        elif feedback == 'l':
-            print("too low")
-            low = guess + 1
+        <span class="variable">elif</span> <span class="variable">feedback</span> == <span class="string"> 'l'</span>:
+            <span class="variable">print</span>(<span class="string">"too low"</span>)
+            <span class="variable">low</span> = <span class="variable">guess</span> + <span class="number">1</span>
         
-        else:
-            print("invalid feedback please enter one of 'c', 'h', or 'l'")
-            continue  
+        <span class="variable">else</span>:
+            <span class="variable">print</span>(<span class="string">"invalid feedback please enter one of 'c', 'h', or 'l'"</span>)
+            <span class="variable">continue</span>  
         
-        prev_guess = guess
-        prev_feedback = feedback
-        attempts += 1
+        <span class="variable">prev_guess</span> = <span class="variable">guess</span>
+        <span class="variable">prev_feedback</span> = <span class="variable">feedback</span>
+        <span class="variable">attempts</span> += <span class="number">1</span>
     
-    print("something's wrong")
+    <span class="variable">print</span>(<span class="string">"something's wrong"</span>)
 
-guessgame3()
+<span class="variable">guessgame3</span>()
     </code></pre>
     <p>Adaptive Search: This approach produces results similar to a binary search, but instead of simply halving the search range each time, it adjusts its guesses based on previous guesses and feedback. The algorithm uses the information from earlier guesses to adaptively adjust its future guesses, making it more flexible and potentially faster in converging to the correct number. The correct number that I had chosen was 10. It took 4 attempts for the AI to guess it correctly.</p>
-
-    <!-- Prism.js JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
 </body>
 </html>
