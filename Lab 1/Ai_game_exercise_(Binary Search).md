@@ -20,6 +20,7 @@
 
 <pre>
 <code class="language-python">
+  ```python
 def guessgame():
     print("Welcome, guess a number from 1 to 100")
     low = 1
