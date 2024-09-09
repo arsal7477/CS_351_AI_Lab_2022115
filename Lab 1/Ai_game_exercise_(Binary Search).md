@@ -13,7 +13,7 @@
 </div>
 
 <!--  code -->
-Below is the Python code for the AI guessing game using BST Algorithm:
+Below is the Python code for the AI guessing game using Binary Search Algorithm:
 
 ```python
 def guessgame():
