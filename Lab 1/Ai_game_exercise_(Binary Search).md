@@ -19,7 +19,7 @@
 <h3>Below is the Python code for the AI guessing game using Binary Search Algorithm:</h3>
 
 <pre>
-<code>
+<code class="python">
 def guessgame():
     print("welcome guess a number from 1 to 100")
     low = 1
@@ -58,7 +58,7 @@ guessgame()
 <h3>Below is the Python code for the AI guessing game using Breadth First Search Algorithm:</h3>
 
 <pre>
-<code>
+<code class="python">
 def guessgame1():
     print("wellcome to ai guess game(BFS)")
     low = 1
@@ -94,7 +94,7 @@ guessgame1()
 <!-- Code Block 3 -->
 <h4>Below is the Python code for the AI guessing game using Depth First Search Algorithm:</h4>
 <pre>
-<code>
+<code class="python">
 def guessgame2():
     print("wellcome to ai guess game,guess a number from 1 t0 100")
     low =1 
@@ -123,3 +123,32 @@ def guessgame2():
 guessgame2()
 </code>
 </pre>
+
+<!-- Style for Syntax Highlighting -->
+<style>
+pre {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    overflow: auto;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+}
+
+code.python {
+    color: #d73a49; /* Keyword color */
+}
+
+code.python .function {
+    color: #6f42c1; /* Function names */
+}
+
+code.python .string {
+    color: #032f62; /* Strings */
+}
+
+code.python .comment {
+    color: #6a737d; /* Comments */
+}
+</style>
