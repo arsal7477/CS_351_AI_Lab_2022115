@@ -127,7 +127,7 @@ guessgame2()
 <p>In this code, if the correct number was 10, the AI would have started guessing from 100 and sequentially decreased the guesses by 1 each time. It would have needed 90 attempts to correctly guess the number 10. This code uses stack logic, where numbers are pushed onto the stack in descending order and then popped from the top of the stack for guessing. Because a stack follows LIFO (Last In, First Out) order, the AI would first guess the highest number and work its way down to the correct number.</p>
 
 <!-- Code Block 4 -->
-<h5>Below is the Python code for the AI guessing game using Adaptive Search Algorithm:</h5>
+<h3>Below is the Python code for the AI guessing game using Adaptive Search Algorithm:</h3>
 <pre>
 <code>
 def guessgame3():
