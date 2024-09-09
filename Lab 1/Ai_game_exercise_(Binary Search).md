@@ -1,26 +1,34 @@
-<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
-<!-- Centered content -->
-<div align="center">
-  <!-- Image -->
-  <img src="https://github.com/user-attachments/assets/aa697654-16be-4b74-9d79-e035dc95833d" alt="Image Description" width="300px">
-  
-  <!-- Title and Information -->
-  <h1>Artificial Intelligence (Lab)</h1>
-  <h2>Lab Exercise</h2>
-  <p>Arsalan Khan<br>2022115<br>Cyber Security</p>
-  <br>
-  <h3>Submitted to: Sir Usama Janjua</h3>
-  <p>Date: September 5, 2024</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Guessing Game Code</title>
+    <!-- Prism.js CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Centered content -->
+    <div align="center">
+        <!-- Image -->
+        <img src="https://github.com/user-attachments/assets/aa697654-16be-4b74-9d79-e035dc95833d" alt="Image Description" width="300px">
+        
+        <!-- Title and Information -->
+        <h1>Artificial Intelligence (Lab)</h1>
+        <h2>Lab Exercise</h2>
+        <p>Arsalan Khan<br>2022115<br>Cyber Security</p>
+        <br>
+        <h3>Submitted to: Sir Usama Janjua</h3>
+        <p>Date: September 5, 2024</p>
+    </div>
 
-<!-- Separator -->
-<hr>
+    <!-- Separator -->
+    <hr>
 
-<!-- Code Block 1 -->
-<h3>Below is the Python code for the AI guessing game using Binary Search Algorithm:</h3>
+    <!-- Code Block 1 -->
+    <h3>Below is the Python code for the AI guessing game using Binary Search Algorithm:</h3>
 
-<pre><code class="language-python">
+    <pre><code class="language-python">
 def guessgame():
     print("welcome guess a number from 1 to 100")
     low = 1
@@ -49,15 +57,15 @@ def guessgame():
     print("something's wrong")
     
 guessgame()
-</code></pre>
+    </code></pre>
 
-<!-- Separator -->
-<hr>
+    <!-- Separator -->
+    <hr>
 
-<!-- Code Block 2 -->
-<h3>Below is the Python code for the AI guessing game using Breadth First Search Algorithm:</h3>
+    <!-- Code Block 2 -->
+    <h3>Below is the Python code for the AI guessing game using Breadth First Search Algorithm:</h3>
 
-<pre><code class="language-python">
+    <pre><code class="language-python">
 def guessgame1():
     print("wellcome to ai guess game(BFS)")
     low = 1
@@ -87,12 +95,12 @@ def guessgame1():
             print("Invalid feedback. Please enter one of 'c', 'h', or 'l'.")
         
 guessgame1()
-</code></pre>
+    </code></pre>
 
-<!-- Code Block 3 -->
-<h4>Below is the Python code for the AI guessing game using Depth First Search Algorithm:</h4>
+    <!-- Code Block 3 -->
+    <h4>Below is the Python code for the AI guessing game using Depth First Search Algorithm:</h4>
 
-<pre><code class="language-python">
+    <pre><code class="language-python">
 def guessgame2():
     print("wellcome to ai guess game,guess a number from 1 to 100")
     low = 1 
@@ -119,9 +127,9 @@ def guessgame2():
             print("invalid choice,,,")
 
 guessgame2()
-</code></pre>
+    </code></pre>
 
-<!-- Prism.js for Syntax Highlighting -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
-
+    <!-- Prism.js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+</body>
+</html>
