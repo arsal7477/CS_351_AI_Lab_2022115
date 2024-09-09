@@ -82,7 +82,7 @@ def guessgame1():
         
 guessgame1()
 ```
-
+https://1drv.ms/i/c/35cdf3066da5bb73/ESb-YJSFKX1NuO0NYRjD2ZsBGZWP903-U4kHu2Wx5WHZwA?e=XZHIzM
 <p>In this code, if the correct number was 10, the AI would have started guessing from 1 and sequentially increased each guess by 1. It would have needed 10 attempts to correctly guess the number 10. This code uses a queue-based logic where all the numbers in the range are initially placed inside the queue, and each number is popped from the top of the queue for guessing.</p>
 
 <!-- Code Block 3 -->
