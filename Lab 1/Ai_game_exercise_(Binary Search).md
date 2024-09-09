@@ -181,5 +181,6 @@ def guessgame3():
 
 guessgame3()
 </code>
-<p>Adaptive Search: This approach produces results similar to a binary search, but instead of simply halving the search range each time, it adjusts its guesses based on previous guesses and feedback. The algorithm uses the information from earlier guesses to adaptively adjust its future guesses, making it more flexible and potentially faster in converging to the correct number.</p>
+<p>Adaptive Search: This approach produces results similar to a binary search, but instead of simply halving the search range each time, it adjusts its guesses based on previous guesses and feedback. The algorithm uses the information from earlier guesses to adaptively adjust its future guesses, making it more flexible and potentially faster in converging to the correct number.
+The correct number that I had chosen was 10. It took 4 attempts for the AI to guess it correctly.</p>
 </pre>
