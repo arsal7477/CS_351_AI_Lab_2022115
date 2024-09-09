@@ -4,7 +4,7 @@
   <img src="https://github.com/user-attachments/assets/aa697654-16be-4b74-9d79-e035dc95833d" alt="Image Description" width="300px">
   
   <!-- Title and Information -->
-  <h1>Artificial Intelligence(Lab)</h1>
+  <h1>Artificial Intelligence (Lab)</h1>
   <h2>Lab Exercise</h2>
   <p>Arsalan Khan<br>2022115<br>Cyber Security</p>
   <br>
@@ -12,19 +12,23 @@
   <p>Date: September 5, 2024</p>
 </div>
 
-<!--  code -->
-Below is the Python code for the AI guessing game using Binary Search Algorithm:
+<!-- Separator -->
+<hr>
 
-```python
+<!-- Code Block 1 -->
+<h3>Below is the Python code for the AI guessing game using Binary Search Algorithm:</h3>
+
+<pre>
+<code>
 def guessgame():
     print("welcome guess a number from 1 to 100")
     low = 1
     high = 100
-    attempts =0
+    attempts = 0
     
-    while (low<=high):
+    while (low <= high):
         guess = (low + high) // 2
-        attempts +=1
+        attempts += 1
         
         print(f"ai guess: {guess}")
         feedback = input("enter feedback c,l,h::").lower()
@@ -37,33 +41,39 @@ def guessgame():
             high = guess - 1
             print("too high")
         
-        elif feedback =='l':
+        elif feedback == 'l':
             low = guess + 1
             print("too low")
         
     print("something's wrong")
     
 guessgame()
+</code>
+</pre>
 
-<!--  code -->
-Below is the Python code for the AI guessing game using Breadth First Search Algorithm:
+<!-- Separator -->
+<hr>
 
+<!-- Code Block 2 -->
+<h3>Below is the Python code for the AI guessing game using Breadth First Search Algorithm:</h3>
+
+<pre>
+<code>
 def guessgame1():
     print("wellcome to ai guess game(BFS)")
-    low =1
-    high =100
+    low = 1
+    high = 100
     
-    queue = list(range(low,high+1)) #high+1 incledes 100
-    attempts=0
+    queue = list(range(low, high + 1))  # high + 1 includes 100
+    attempts = 0
     
     while queue:
-        
         guess = queue.pop(0)
-        attempts +=1
+        attempts += 1
         
         print(f"ai guess is {guess}")
         
-        feedback = input("enter 1 of the folowing c,h,l: ").lower()
+        feedback = input("enter 1 of the following c,h,l: ").lower()
         
         if feedback == 'c':
             print(f"ai guessed correctly in {attempts} attempts")
@@ -77,4 +87,6 @@ def guessgame1():
         else:
             print("Invalid feedback. Please enter one of 'c', 'h', or 'l'.")
         
-guessgame1()        
+guessgame1()
+</code>
+</pre>
