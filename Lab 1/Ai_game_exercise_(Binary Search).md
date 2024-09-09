@@ -1,3 +1,5 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
 <!-- Centered content -->
 <div align="center">
   <!-- Image -->
@@ -18,8 +20,7 @@
 <!-- Code Block 1 -->
 <h3>Below is the Python code for the AI guessing game using Binary Search Algorithm:</h3>
 
-<pre>
-<code class="python">
+<pre><code class="language-python">
 def guessgame():
     print("welcome guess a number from 1 to 100")
     low = 1
@@ -48,8 +49,7 @@ def guessgame():
     print("something's wrong")
     
 guessgame()
-</code>
-</pre>
+</code></pre>
 
 <!-- Separator -->
 <hr>
@@ -57,8 +57,7 @@ guessgame()
 <!-- Code Block 2 -->
 <h3>Below is the Python code for the AI guessing game using Breadth First Search Algorithm:</h3>
 
-<pre>
-<code class="python">
+<pre><code class="language-python">
 def guessgame1():
     print("wellcome to ai guess game(BFS)")
     low = 1
@@ -88,31 +87,30 @@ def guessgame1():
             print("Invalid feedback. Please enter one of 'c', 'h', or 'l'.")
         
 guessgame1()
-</code>
-</pre>
+</code></pre>
 
 <!-- Code Block 3 -->
 <h4>Below is the Python code for the AI guessing game using Depth First Search Algorithm:</h4>
-<pre>
-<code class="python">
+
+<pre><code class="language-python">
 def guessgame2():
-    print("wellcome to ai guess game,guess a number from 1 t0 100")
-    low =1 
+    print("wellcome to ai guess game,guess a number from 1 to 100")
+    low = 1 
     high = 100
     attempts = 0
     
-    stack = list(range(low,high+1))
+    stack = list(range(low, high + 1))
     
     while stack:
         guess = stack.pop()
-        attempts +=1
+        attempts += 1
         print(f"ai guess is {guess}")
         feedback = input("select one of the following c,h,l").lower()
         
-        if feedback =='c':
+        if feedback == 'c':
             print(f"ai guessed correctly in {attempts} attempts")
             return
-        elif feedback =='h':
+        elif feedback == 'h':
             print("too high")
         elif feedback == 'l':
             print("too low...")
@@ -121,34 +119,9 @@ def guessgame2():
             print("invalid choice,,,")
 
 guessgame2()
-</code>
-</pre>
+</code></pre>
 
-<!-- Style for Syntax Highlighting -->
-<style>
-pre {
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 10px;
-    overflow: auto;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 14px;
-}
+<!-- Prism.js for Syntax Highlighting -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
 
-code.python {
-    color: #d73a49; /* Keyword color */
-}
-
-code.python .function {
-    color: #6f42c1; /* Function names */
-}
-
-code.python .string {
-    color: #032f62; /* Strings */
-}
-
-code.python .comment {
-    color: #6a737d; /* Comments */
-}
-</style>
