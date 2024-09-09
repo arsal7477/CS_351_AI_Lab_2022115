@@ -92,7 +92,7 @@ guessgame1()
 </pre>
 
 <!-- Code Block 3 -->
-<h4>Below is the Python code for the AI guessing game using Breadth First Search Algorithm:</h4>
+<h4>Below is the Python code for the AI guessing game using Depth First Search Algorithm:</h4>
 <pre>
 <code>
 def guessgame2():
