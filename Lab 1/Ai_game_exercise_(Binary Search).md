@@ -19,8 +19,9 @@
 <h3>Below is the Python code for the AI guessing game using Binary Search Algorithm:</h3>
 
 <pre>
-<code class="language-python">
 ```python
+<code class="language-python">
+
 def guessgame():
     print("Welcome, guess a number from 1 to 100")
     low = 1
