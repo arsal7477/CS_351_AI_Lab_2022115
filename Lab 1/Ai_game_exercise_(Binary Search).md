@@ -90,3 +90,36 @@ def guessgame1():
 guessgame1()
 </code>
 </pre>
+
+<!-- Code Block 3 -->
+<h4>Below is the Python code for the AI guessing game using Breadth First Search Algorithm:</h4>
+<pre>
+<code>
+def guessgame2():
+    print("wellcome to ai guess game,guess a number from 1 t0 100")
+    low =1 
+    high = 100
+    attempts = 0
+    
+    stack = list(range(low,high+1))
+    
+    while stack:
+        guess = stack.pop()
+        attempts +=1
+        print(f"ai guess is {guess}")
+        feedback = input("select one of the following c,h,l").lower()
+        
+        if feedback =='c':
+            print(f"ai guessed correctly in {attempts} attempts")
+            return
+        elif feedback =='h':
+            print("too high")
+        elif feedback == 'l':
+            print("too low...")
+        
+        else:
+            print("invalid choice,,,")
+
+guessgame2()
+</code>
+</pre>
