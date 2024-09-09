@@ -18,8 +18,9 @@
 <!-- Code Block 1 -->
 <h3>Below is the Python code for the AI guessing game using Binary Search Algorithm:</h3>
 
-<pre>
 ```python
+<pre>
+
 <code class="language-python">
 
 def guessgame():
