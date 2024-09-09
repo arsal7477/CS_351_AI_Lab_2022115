@@ -123,3 +123,58 @@ def guessgame2():
 guessgame2()
 </code>
 </pre>
+
+<!-- Code Block 3 -->
+<h5>Below is the Python code for the AI guessing game using Depth First Search Algorithm:</h5>
+<pre>
+<code>
+
+def guessgame3():
+    print("welcome to the guess game using adaptive search")
+    
+    low = 1
+    high = 100
+    attempts = 0
+    
+    prev_guess = None
+    prev_feedback = None
+    
+    while low <= high:
+        
+        if prev_guess is None:
+            guess = (low + high) // 2
+        elif prev_feedback == 'h':
+            guess = prev_guess - (prev_guess - low) // 2
+        elif prev_feedback == 'l':
+            guess = prev_guess + (high - prev_guess) // 2
+        else:
+            guess = (low + high) // 2
+        
+        print(f"ai guess: {guess}")
+        feedback = input("enter feedback c,h,l: ").lower()
+        
+        if feedback == 'c':
+            print(f"ai guessed correctly in {attempts} attempt(s)")
+            return
+        
+        elif feedback == 'h':
+            print("too high")
+            high = guess - 1
+            
+        elif feedback == 'l':
+            print("too low")
+            low = guess + 1
+        
+        else:
+            print("invalid feedback please enter one of 'c', 'h', or 'l'")
+            continue  
+        
+        prev_guess = guess
+        prev_feedback = feedback
+        attempts += 1
+    
+    print("something's wrong")
+
+guessgame3()
+</code>
+</pre>
