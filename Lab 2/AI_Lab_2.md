@@ -16,7 +16,7 @@
 <hr>
 
 <!-- Code Block 1 -->
-<h3>Below is the Python code for theMaze escape game using Binary Search Algorithm:</h3>
+<h3>Below is the Python code for theMaze escape game using Bredth First Search Algorithm:</h3>
 
 ```python
 import queue  # Importing queue to implement BFS
