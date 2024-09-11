@@ -1,3 +1,4 @@
+
 import queue  # Importing queue to implement BFS
 import random  # Importing random to place the obstacles randomly and shuffle directions
 
