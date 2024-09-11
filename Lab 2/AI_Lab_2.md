@@ -17,6 +17,7 @@
 
 <!-- Code Block 1 -->
 <h3>Below is the Python code for the AI guessing game using Binary Search Algorithm:</h3>
+
 ```python
 import queue  # Importing queue to implement BFS
 import random  # Importing random to place the obstacles randomly and shuffle directions
