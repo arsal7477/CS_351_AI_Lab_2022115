@@ -1,4 +1,4 @@
-# 🌟 Welcome to the AI Lab Repository!
+# 🌟 Welcome to the AI Lab CS351 Repository!
 
 🌟 AI Lab Repository Welcome to the AI Lab Repository, where we dive deep into the fascinating world of Artificial Intelligence! 🤖 This repository serves as a collection of exercises, projects, and lab tasks related to AI, covering various concepts and techniques in this evolving field. Whether you're here to learn, explore, or contribute, you're in the right place!🤖✨
 
