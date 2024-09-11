@@ -1,3 +1,22 @@
+<!-- Centered content -->
+<div align="center">
+  <!-- Image -->
+  <img src="https://github.com/user-attachments/assets/aa697654-16be-4b74-9d79-e035dc95833d" alt="Image Description" width="300px">
+  
+  <!-- Title and Information -->
+  <h1>Artificial Intelligence (Lab)</h1>
+  <h2>Lab 2 Task</h2>
+  <p><strong>Arsalan Khan</strong><br>2022115<br>Cyber Security</p>
+  <br>
+  <h3>Submitted to: Sir Usama Arshad</h3>
+  <p>Date: September 11, 2024</p>
+</div>
+
+<!-- Separator -->
+<hr>
+
+<!-- Code Block 1 -->
+<h3>Below is the Python code for the AI guessing game using Binary Search Algorithm:</h3>
 ```python
 import queue  # Importing queue to implement BFS
 import random  # Importing random to place the obstacles randomly and shuffle directions
