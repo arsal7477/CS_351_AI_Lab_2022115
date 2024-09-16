@@ -91,6 +91,7 @@ def add_obstacles(grid, num_obstacles):
     
     return grid
 ```
+Remaining code is almost the same as the Tresure Hunt game
 ```python
 # Heuristic function: Calculates the straight-line (Euclidean) distance between the current node and the goal
 def heuristic(a, b):
@@ -185,3 +186,7 @@ def maze_escape():
 maze_escape()
 
 ```
+Output:
+
+![1](https://github.com/user-attachments/assets/191ebc6f-ad36-45c0-9bb8-468b7de37740)![2](https://github.com/user-attachments/assets/ae4ccd72-7474-4fdd-be50-1166b8e50f65)
+
