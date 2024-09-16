@@ -187,6 +187,9 @@ maze_escape()
 
 ```
 Output:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/191ebc6f-ad36-45c0-9bb8-468b7de37740" alt="Image 1" width="400"/>
+  <img src="https://github.com/user-attachments/assets/ae4ccd72-7474-4fdd-be50-1166b8e50f65" alt="Image 2" width="400"/>
+</p>
 
-![1](https://github.com/user-attachments/assets/191ebc6f-ad36-45c0-9bb8-468b7de37740)![2](https://github.com/user-attachments/assets/ae4ccd72-7474-4fdd-be50-1166b8e50f65)
 
