@@ -23,8 +23,8 @@ Submit pull requests to add new exercises, tasks, or datasets.
 Report issues or suggest enhancements via the Issues tab.
 
 
-📬 Me:
-For any queries or collaboration requests, feel free to reach out via email at arsalanswat7@gmail.com or create an issue in this repo.
-Arsalan Khan
-reg no: 2022115
+📬 Me:<br>
+For any queries or collaboration requests, feel free to reach out via email at arsalanswat7@gmail.com or create an issue in this repo.<br>
+Arsalan Khan<br>
+reg no: 2022115<br>
 Happy Learning! 🎓 Let's build AI that changes the world! 🌍✨
