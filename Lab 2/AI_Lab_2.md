@@ -16,6 +16,15 @@
 <hr>
 
 <!-- Code Block 1 -->
+
+
+In this code, a classic treasure hunt game has been transformed into a maze escape game using the A* algorithm for pathfinding. The objective is for the player to find the escape point ('E') starting from a fixed position ('S'). Key changes include:
+
+Fixed Escape Point: The game now has a fixed goal where the escape point is always at the bottom-right corner of the grid.
+
+Obstacle Placement: Obstacles are placed randomly in the grid, but the code ensures they do not block the only path from the start ('S') to the escape ('E') by utilizing a path validation function.
+
+Pathfinding: The A* algorithm, which uses a priority queue, calculates the shortest path based on a heuristic (Euclidean distance) from the start to the goal. The path is then displayed in the grid, with each step marked as '*' while avoiding overwriting 'S' and 'E'.
 <h3>Below is the Python code for theMaze escape game using A* algorithm Algorithm:</h3>
 
 ```python
