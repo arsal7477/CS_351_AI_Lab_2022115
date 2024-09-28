@@ -1,0 +1,98 @@
+import networkx as nx
+import matplotlib.pyplot as plt
+
+# Step 1: Define a cleaner graph with exactly 16 nodes and structured edges
+regions_graph = nx.Graph()
+
+# Define the nodes (16 regions)
+regions = [f'Region {i+1}' for i in range(16)]
+
+# Define a cleaner set of edges for structured visualization
+edges = [('Region 1', 'Region 2'), ('Region 1', 'Region 3'), ('Region 2', 'Region 4'),
+         ('Region 3', 'Region 5'), ('Region 4', 'Region 5'), ('Region 4', 'Region 6'),
+         ('Region 5', 'Region 7'), ('Region 6', 'Region 7'), ('Region 6', 'Region 8'),
+         ('Region 7', 'Region 9'), ('Region 8', 'Region 10'), ('Region 9', 'Region 11'),
+         ('Region 10', 'Region 12'), ('Region 11', 'Region 12'), ('Region 12', 'Region 13'),
+         ('Region 11', 'Region 14'), ('Region 13', 'Region 15'), ('Region 14', 'Region 16')]
+
+# Add edges to the graph
+regions_graph.add_edges_from(edges)
+
+# Step 2: Define the available blood groups
+blood_groups = ['A', 'B', 'O', 'AB']  # Keep 4 blood groups for complexity
+
+# Step 3: Visualize the current blood group assignments
+def visualize_blood_groups(assignment, step):
+    plt.figure(figsize=(10, 10))  # Set graph size to be clean but not too large
+    pos = nx.spring_layout(regions_graph, seed=42)  # Use spring layout for cleaner node positioning
+
+    # Default labels for unassigned blood groups
+    labels = {node: '' for node in regions_graph.nodes}
+    labels.update(assignment)  # Update labels with the current assignment
+
+    # Draw the regions graph with current blood group assignments as labels
+    nx.draw(regions_graph, pos, with_labels=True, labels=labels, font_weight='bold',
+            node_size=2500, font_size=12, font_color='black', edge_color='gray',
+            linewidths=2, node_shape='o', edgecolors='black')
+
+    plt.title(f"Blood Group Assignment Step {step}")
+    plt.show()
+
+# Step 4: Check if the blood group assignment is valid for a region
+def is_consistent(region, blood_group, assignment):
+    for neighbor in regions_graph.neighbors(region):
+        if neighbor in assignment and assignment[neighbor] == blood_group:
+            return False
+    return True
+
+# MRV heuristic to select the next region with the fewest legal values
+def select_unassigned_variable(assignment):
+    unassigned_regions = [region for region in regions_graph.nodes if region not in assignment]
+
+    # For each unassigned region, count the number of legal values it can take
+    min_region = None
+    min_options = float('inf')
+
+    for region in unassigned_regions:
+        # Count how many blood groups are possible for this region
+        legal_values = [bg for bg in blood_groups if is_consistent(region, bg, assignment)]
+        if len(legal_values) < min_options:
+            min_options = len(legal_values)
+            min_region = region
+
+    return min_region  # Return the region with the fewest available options
+
+# Heuristic to order blood group choices (simpler version here, but you can modify)
+def order_domain_values(region, assignment):
+    # Example heuristic: prioritize blood groups with the least conflicts
+    # In this simple case, we'll just return blood groups as they are.
+    return blood_groups
+
+# Backtracking function with MRV and heuristic-based ordering of domain values
+def backtrack(assignment):
+    if len(assignment) == len(regions_graph.nodes):
+        return assignment  # All regions are assigned blood groups
+
+    region = select_unassigned_variable(assignment)  # MRV for selecting the next region
+    if region is None:
+        return None  # No unassigned regions left
+
+    # Use the heuristic to order blood groups
+    for blood_group in order_domain_values(region, assignment):
+        if is_consistent(region, blood_group, assignment):
+            assignment[region] = blood_group  # Assign the blood group
+            visualize_blood_groups(assignment, len(assignment) + 1)  # Visualize the current step
+            result = backtrack(assignment)
+            if result:
+                return result  # Return if a valid assignment is found
+            del assignment[region]  # Backtrack if no valid solution
+
+    return None  # No solution found, backtrack
+
+# Perform the blood group assignment
+def assign_blood_groups():
+    final_assignment = backtrack({})
+    print("Final Blood Group Assignment:", final_assignment)
+
+# Run the blood group assignment
+assign_blood_groups()
