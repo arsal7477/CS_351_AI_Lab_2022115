@@ -1,3 +1,25 @@
+<!-- Centered content -->
+<div align="center">
+  <!-- Logo/Image -->
+  <img src="https://github.com/user-attachments/assets/aa697654-16be-4b74-9d79-e035dc95833d" alt="Image Description" width="300px">
+  
+  <!-- Title and Information -->
+  <h1>Artificial Intelligence (Lab)</h1>
+  <h2>Lab 2 Task</h2>
+  <p><strong>Arsalan Khan</strong><br>2022115<br>Cyber Security</p>
+  <br>
+  <h3>Submitted to: Sir Usama Arshad</h3>
+  <p>Date: September 16, 2024</p>
+</div>
+
+<!-- Separator -->
+<hr>
+
+<!-- Code Block -->
+<h3>Below is the Python code for Blood Group Assignment using Backtracking with MRV Heuristic:</h3>
+
+<pre>
+<code>
 import networkx as nx
 import matplotlib.pyplot as plt
 
@@ -65,7 +87,6 @@ def select_unassigned_variable(assignment):
 # Heuristic to order blood group choices (simpler version here, but you can modify)
 def order_domain_values(region, assignment):
     # Example heuristic: prioritize blood groups with the least conflicts
-    # In this simple case, we'll just return blood groups as they are.
     return blood_groups
 
 # Backtracking function with MRV and heuristic-based ordering of domain values
@@ -96,5 +117,5 @@ def assign_blood_groups():
 
 # Run the blood group assignment
 assign_blood_groups()
-
-
+</code>
+</pre>
