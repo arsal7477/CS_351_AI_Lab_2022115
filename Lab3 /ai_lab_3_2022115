@@ -1,33 +1,3 @@
-<!-- Centered content -->
-<div align="center">
-  <!-- Image -->
-  <img src="https://github.com/user-attachments/assets/aa697654-16be-4b74-9d79-e035dc95833d" alt="Image Description" width="300px">
-  
-  <!-- Title and Information -->
-  <h1>Artificial Intelligence (Lab)</h1>
-  <h2>Lab 2 Task</h2>
-  <p><strong>Arsalan Khan</strong><br>2022115<br>Cyber Security</p>
-  <br>
-  <h3>Submitted to: Sir Usama Arshad</h3>
-  <p>Date: September 16, 2024</p>
-</div>
-
-<!-- Separator -->
-<hr>
-
-<!-- Code Block 1 -->
-
-
-In this code, a classic treasure hunt game has been transformed into a maze escape game using the A* algorithm for pathfinding. The objective is for the player to find the escape point ('E') starting from a fixed position ('S'). Key changes include:
-
-Fixed Escape Point: The game now has a fixed goal where the escape point is always at the bottom-right corner of the grid.
-
-Obstacle Placement: Obstacles are placed randomly in the grid, but the code ensures they do not block the only path from the start ('S') to the escape ('E') by utilizing a path validation function.
-
-Pathfinding: The A* algorithm, which uses a priority queue, calculates the shortest path based on a heuristic (Euclidean distance) from the start to the goal. The path is then displayed in the grid, with each step marked as '*' while avoiding overwriting 'S' and 'E'.
-<h3>Below is the Python code for theMaze escape game using A* algorithm Algorithm:</h3>
-
-```python
 import networkx as nx
 import matplotlib.pyplot as plt
 
@@ -126,14 +96,5 @@ def assign_blood_groups():
 
 # Run the blood group assignment
 assign_blood_groups()
-
-
-
-```
-Output:
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/191ebc6f-ad36-45c0-9bb8-468b7de37740" alt="Image 1" width="400"/>
-  <img src="https://github.com/user-attachments/assets/ae4ccd72-7474-4fdd-be50-1166b8e50f65" alt="Image 2" width="400"/>
-</p>
 
 
