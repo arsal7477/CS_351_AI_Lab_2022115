@@ -11,7 +11,7 @@
 
 ## Description
 
-This repository contains only the code part of Lab 4 Artificial Intelligence course.Visualizations and other ouputs are in another file:
+This repository contains only the code part of Lab 4 Artificial Intelligence course.Visualizations and other ouputs are in another file: https://github.com/arsal7477/CS_351_AI_Lab_2022115/blob/main/Lab%204%20/2022115_lab_4.ipynb
 
 ---
 
