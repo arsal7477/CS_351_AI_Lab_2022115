@@ -3,15 +3,15 @@
 </p>
 
 <h1 align="center">Artificial Intelligence (Lab)</h1>
-<h2 align="center">Lab 2 Task</h2>
+<h2 align="center">Lab 4 Task</h2>
 <p align="center"><strong>Arsalan Khan</strong><br>2022115<br>Cyber Security</p>
-<p align="center">Submitted to: Sir Usama Arshad<br>Date: September 16, 2024</p>
+<p align="center">Submitted to: Sir Usama Arshad<br>Date: September 29, 2024</p>
 
 ---
 
 ## Description
 
-This repository contains my work for Lab 2 of the Artificial Intelligence course, where we predict passenger survival on the Titanic using machine learning models.
+This repository contains only the code part of Lab 4 Artificial Intelligence course.
 
 ---
 
