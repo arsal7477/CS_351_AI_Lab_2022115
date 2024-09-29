@@ -11,7 +11,7 @@
 
 ## Description
 
-This repository contains only the code part of Lab 4 Artificial Intelligence course.
+This repository contains only the code part of Lab 4 Artificial Intelligence course.Visualizations and other ouputs are in another file:
 
 ---
 
