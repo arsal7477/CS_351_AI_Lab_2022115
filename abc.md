@@ -39,6 +39,7 @@ url = 'https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic
 titanic_df = pd.read_csv(url)
 
 # Display the first few rows of the dataset
+print("First few rows of the dataset:")
 print(titanic_df.head())
 
 # Set style for the plots
@@ -110,7 +111,7 @@ knn_predictions = knn.predict(X_test)
 knn_accuracy = accuracy_score(y_test, knn_predictions)
 knn_classification_rep = classification_report(y_test, knn_predictions)
 
-print(f"Accuracy of k-NN: {knn_accuracy * 100:.2f}%")
+print(f"\nAccuracy of k-NN: {knn_accuracy * 100:.2f}%")
 print("\nClassification Report for k-NN:\n", knn_classification_rep)
 
 # Implementing Decision Tree Classifier
@@ -124,5 +125,31 @@ dt_predictions = decision_tree.predict(X_test)
 dt_accuracy = accuracy_score(y_test, dt_predictions)
 dt_classification_rep = classification_report(y_test, dt_predictions)
 
-print(f"Accuracy of Decision Tree: {dt_accuracy * 100:.2f}%")
+print(f"\nAccuracy of Decision Tree: {dt_accuracy * 100:.2f}%")
 print("\nClassification Report for Decision Tree:\n", dt_classification_rep)
+
+# Function to visualize decision boundaries
+def plot_decision_boundaries(model, X, y, title):
+    # Adjusting the step size to 0.1 for faster computation
+    x_min, x_max = X.iloc[:, 0].min() - 1, X.iloc[:, 0].max() + 1
+    y_min, y_max = X.iloc[:, 1].min() - 1, X.iloc[:, 1].max() + 1
+    xx, yy = np.meshgrid(np.arange(x_min, x_max, 0.1),
+                         np.arange(y_min, y_max, 0.1))
+
+    # Create a DataFrame for prediction with valid feature names
+    Z = model.predict(pd.DataFrame(np.c_[xx.ravel(), yy.ravel()], columns=X.columns))
+    Z = Z.reshape(xx.shape)
+
+    plt.figure(figsize=(12, 6))
+    plt.contourf(xx, yy, Z, alpha=0.3, cmap='coolwarm')
+    plt.scatter(X.iloc[:, 0], X.iloc[:, 1], c=y, edgecolors='k', marker='o', s=100)
+    plt.title(title)
+    plt.xlabel('Pclass')
+    plt.ylabel('Fare')
+    plt.show()
+
+# Decision boundaries for k-NN
+plot_decision_boundaries(knn, X[['Pclass', 'Fare']], y, 'k-NN Decision Boundary')
+
+# Decision boundaries for Decision Tree
+plot_decision_boundaries(decision_tree, X[['Pclass', 'Fare']], y, 'Decision Tree Decision Boundary')
